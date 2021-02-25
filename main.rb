@@ -1,8 +1,5 @@
-
-
 require "./task"
 require "./todo"
-
 
 task1 = Task.new(title: "洗濯", content: "7時半までに干し終える")
 task2 = Task.new(title: "仕事", content: "9時〜18時")
@@ -16,6 +13,4 @@ todo.delete(id: 1)
 todo.add(task3)
 todo.delete(id: 1)
 todo.delete(id: 3)
-
-
 todo.index
