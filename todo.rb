@@ -5,14 +5,19 @@ class ToDo
 
   def add(task)
     @tasks << task
+    puts "【追加】[No.#{task.id}] #{task.title}:#{task.content}"
   end
 
   def index
-    puts "*=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=*"
-    @tasks.each do |task|
-      puts "[No.#{task.id}] #{task.title}:#{task.content}"
+    if @tasks .empty?
+      puts "【！】 タスクはありません。"
+    else
+      puts "*=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=*"
+      @tasks.each do |task|
+        puts "[No.#{task.id}] #{task.title}:#{task.content}"
+      end
+      puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
     end
-    puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
   end
 
   def delete(id:)
@@ -21,6 +26,7 @@ class ToDo
 
     if task
       @tasks.delete(task)
+      puts "【削除】[No.#{task.id}] #{task.title}:#{task.content}"
     else
       puts "【！】 該当idのタスクはありません。"
     end
