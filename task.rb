@@ -8,4 +8,8 @@ class Task
     @title = title
     @content = content
   end
+
+  def info
+    puts "【追加】[No.#{@id}] #{@title}:#{@content}"
+  end
 end
