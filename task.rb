@@ -10,6 +10,6 @@ class Task
   end
 
   def info
-    puts "【追加】[No.#{@id}] #{@title}:#{@content}"
+    "[No.#{@id}] #{@title}:#{@content}"
   end
 end

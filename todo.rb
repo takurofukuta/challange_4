@@ -5,7 +5,7 @@ class ToDo
 
   def add(task)
     @tasks << task
-    task.info
+    puts "【追加】" + task.info
   end
 
   def index
@@ -14,7 +14,7 @@ class ToDo
     else
       puts "*=*=*=*=*=*=*=*=* task *=*=*=*=*=*=*=*=*"
       @tasks.each do |task|
-        task.info
+        puts task.info
       end
       puts "*=*=*=*=*=*=*=*=*=*=*=**=*=*=*=*=*=*=*=*"
     end
@@ -26,7 +26,7 @@ class ToDo
 
     if task
       @tasks.delete(task)
-      task.info
+      puts "【削除】" + task.info
     else
       puts "【！】 該当idのタスクはありません。"
     end
